@@ -22,12 +22,12 @@ db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
 db.User = require('../models/userModel/user')(sequelize, Sequelize);
 db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
 
-// db.Event = require('../models/eventsModal/event')(sequelize, Sequelize);
-// db.EventImage = require('../models/eventsModal/eventImage')(sequelize, Sequelize);
+db.Event = require('../models/eventsModal/event')(sequelize, Sequelize);
+db.EventImage = require('../models/eventsModal/eventImage')(sequelize, Sequelize);
 
-// db.Attraction = require('../models/attractionModel/attraction')(sequelize, Sequelize);
-// db.AttractionImage = require('../models/attractionModel/attractionImage')(sequelize, Sequelize);
-// db.AttractionType = require('../models/attractionModel/attractionType')(sequelize, Sequelize);
+db.AttractionType = require('../models/attractionModel/attractionType')(sequelize, Sequelize);
+db.Attraction = require('../models/attractionModel/attraction')(sequelize, Sequelize);
+db.AttractionImage = require('../models/attractionModel/attractionImage')(sequelize, Sequelize); 
 
 // db.Business = require('../models/businessModel/business')(sequelize, Sequelize);
 // db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
