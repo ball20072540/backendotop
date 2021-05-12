@@ -31,7 +31,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //---------------------------------- Table ---------------------------------- 
-// db.User = require('../models/userModel/user')(sequelize, Sequelize);
+db.User = require('../models/userModel/user')(sequelize, Sequelize);
 // db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
 // db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
 
