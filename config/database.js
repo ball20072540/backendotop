@@ -101,7 +101,7 @@ db.Business.belongsTo(db.BusinessType, {foreignKey: 'typeId', targetKey: 'id'})
 db.User.hasOne(db.LogOwnerRegister, {foreignKey: 'ownerId', targetKey: 'id'})
 db.LogOwnerRegister.belongsTo(db.User, {foreignKey: 'ownerId', targetKey: 'id'})
 
-db.DeliveryService.hasMany(db.Packaging, {foreignKey: 'deliveryBy', targetKey: 'id'})
+// db.DeliveryService.hasMany(db.Packaging, {foreignKey: 'deliveryBy', targetKey: 'id'})
 // db.Packaging.belongsTo(db.DeliveryService, {foreignKey: 'deliveryBy', targetKey: 'id'})
 
 db.Business.hasMany(db.Product, {foreignKey: 'businessId', targetKey: 'id'})
