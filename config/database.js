@@ -35,8 +35,6 @@ db.BusinessLicense = require('../models/businessModel/businessLicense')(sequeliz
 db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
 db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 
-db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
-
 db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
 db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
@@ -59,6 +57,7 @@ db.BookingStatus = require('../models/bookingModel/bookingStatus')(sequelize, Se
 db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
 
 db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
+db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
 // //---------------------------------- Map Table ----------------------------------
 // db.UserRole.hasMany(db.User, {foreignKey: 'role_id', targetKey: 'id'})
 // db.User.belongsTo(db.UserRole, {foreignKey: 'role_id', targetKey: 'id'})
