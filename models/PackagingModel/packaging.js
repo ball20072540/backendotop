@@ -9,7 +9,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         deliveryBy: {
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         packagingName: {
             type: Sequelize.STRING,

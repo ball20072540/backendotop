@@ -42,8 +42,6 @@ db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Se
 db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
 db.Product = require('../models/productModel/product')(sequelize, Sequelize);
 db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
-db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
-db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
 db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
 db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
@@ -59,6 +57,10 @@ db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
 
 db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
 db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
+
+db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
+db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
+
 // //---------------------------------- Map Table ----------------------------------
 // db.UserRole.hasMany(db.User, {foreignKey: 'role_id', targetKey: 'id'})
 // db.User.belongsTo(db.UserRole, {foreignKey: 'role_id', targetKey: 'id'})
