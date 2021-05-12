@@ -42,6 +42,7 @@ db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Se
 db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
 db.Product = require('../models/productModel/product')(sequelize, Sequelize);
 db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
+db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize)
 
 db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
 db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
@@ -57,10 +58,6 @@ db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
 
 db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
 db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
-
-
-// db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
-
 // //---------------------------------- Map Table ----------------------------------
 db.UserRole.hasMany(db.User, {foreignKey: 'role_id', targetKey: 'id'})
 db.User.belongsTo(db.UserRole, {foreignKey: 'role_id', targetKey: 'id'})
@@ -101,8 +98,8 @@ db.Business.belongsTo(db.BusinessType, {foreignKey: 'typeId', targetKey: 'id'})
 db.User.hasOne(db.LogOwnerRegister, {foreignKey: 'ownerId', targetKey: 'id'})
 db.LogOwnerRegister.belongsTo(db.User, {foreignKey: 'ownerId', targetKey: 'id'})
 
-// db.DeliveryService.hasMany(db.Packaging, {foreignKey: 'deliveryBy', targetKey: 'id'})
-// db.Packaging.belongsTo(db.DeliveryService, {foreignKey: 'deliveryBy', targetKey: 'id'})
+db.DeliveryService.hasMany(db.Packaging, {foreignKey: 'deliveryBy', targetKey: 'id'})
+db.Packaging.belongsTo(db.DeliveryService, {foreignKey: 'deliveryBy', targetKey: 'id'})
 
 db.Business.hasMany(db.Product, {foreignKey: 'businessId', targetKey: 'id'})
 db.Product.belongsTo(db.Business, {foreignKey: 'businessId', targetKey: 'id'})
@@ -116,11 +113,11 @@ db.Product.belongsTo(db.ProductSuffix, {foreignKey: 'suffixId', targetKey: 'id'}
 db.ProductType.hasMany(db.Product, {foreignKey: 'typeId', targetKey: 'id'})
 db.Product.belongsTo(db.ProductType, {foreignKey: 'typeId', targetKey: 'id'})
 
-// db.Product.hasMany(db.MapProductPackaging, {foreignKey: 'productId', targetKey: 'id'})
-// db.MapProductPackaging.belongsTo(db.Product, {foreignKey: 'productId', targetKey: 'id'})
+db.Product.hasMany(db.MapProductPackaging, {foreignKey: 'productId', targetKey: 'id'})
+db.MapProductPackaging.belongsTo(db.Product, {foreignKey: 'productId', targetKey: 'id'})
 
-// db.Packaging.hasMany(db.MapProductPackaging, {foreignKey: 'packagingId', targetKey: 'id'})
-// db.MapProductPackaging.belongsTo(db.Packaging, {foreignKey: 'packagingId', targetKey: 'id'})
+db.Packaging.hasMany(db.MapProductPackaging, {foreignKey: 'packagingId', targetKey: 'id'})
+db.MapProductPackaging.belongsTo(db.Packaging, {foreignKey: 'packagingId', targetKey: 'id'})
 
 db.OrderStatus.hasMany(db.Order, {foreignKey: 'statusId', targetKey: 'id'})
 db.Order.belongsTo(db.OrderStatus, {foreignKey: 'statusId', targetKey: 'id'})
