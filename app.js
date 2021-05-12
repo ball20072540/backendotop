@@ -10,8 +10,8 @@ var usersRouter = require('./routes/users');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 
-var db = require("./config/database");
-db.sequelize.sync();
+// var db = require("./config/database");
+// db.sequelize.sync();
 
 var app = express();
 
