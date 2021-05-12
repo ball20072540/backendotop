@@ -7,14 +7,15 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const cors = require('cors')
-const bodyParser = require('body-parser')
+var cors = require('cors')
+var bodyParser = require('body-parser')
 
-// const db = require("./config/database");
+var db = require("./config/database");
+db.sequelize.sync();
 
 var app = express();
 
-// db.sequelize.sync();
+
 
 //custom setup
 app.use(bodyParser.urlencoded({ extended: true }))
