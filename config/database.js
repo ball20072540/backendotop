@@ -38,10 +38,10 @@ db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, S
 db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
 // db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
-// db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
-// db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
-// db.Product = require('../models/productModel/product')(sequelize, Sequelize);
-// db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
+db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
+db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
+db.Product = require('../models/productModel/product')(sequelize, Sequelize);
+db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
 // db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
 
 // db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
