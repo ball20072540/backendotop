@@ -18,8 +18,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //---------------------------------- Table ---------------------------------- 
-
-
 db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
 db.User = require('../models/userModel/user')(sequelize, Sequelize);
 db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
@@ -37,9 +35,8 @@ db.BusinessLicense = require('../models/businessModel/businessLicense')(sequeliz
 db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
 db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 
-db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
 db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
-
+db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
 // db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
 // db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
 // db.Product = require('../models/productModel/product')(sequelize, Sequelize);
