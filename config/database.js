@@ -36,7 +36,7 @@ db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Seq
 db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 
 db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
-db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
+// db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
 // db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
 // db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
