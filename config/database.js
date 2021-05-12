@@ -18,6 +18,8 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //---------------------------------- Table ---------------------------------- 
+db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
+
 db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
 db.User = require('../models/userModel/user')(sequelize, Sequelize);
 db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
@@ -35,26 +37,25 @@ db.BusinessLicense = require('../models/businessModel/businessLicense')(sequeliz
 db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
 db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 
-db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
 db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
-db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
-db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
-db.Product = require('../models/productModel/product')(sequelize, Sequelize);
-db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
-db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
+// db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
+// db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
+// db.Product = require('../models/productModel/product')(sequelize, Sequelize);
+// db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
+// db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
 
-db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
-db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
-db.OrderDetail = require('../models/orderModel/orderDetail')(sequelize, Sequelize);
+// db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
+// db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
+// db.OrderDetail = require('../models/orderModel/orderDetail')(sequelize, Sequelize);
 
-db.RoomType = require('../models/roomModel/roomType')(sequelize, Sequelize);
-db.RoomStatus = require('../models/roomModel/roomStatus')(sequelize, Sequelize);
-db.Room = require('../models/roomModel/room')(sequelize, Sequelize);
-db.RoomImage = require('../models/roomModel/roomImage')(sequelize, Sequelize);
+// db.RoomType = require('../models/roomModel/roomType')(sequelize, Sequelize);
+// db.RoomStatus = require('../models/roomModel/roomStatus')(sequelize, Sequelize);
+// db.Room = require('../models/roomModel/room')(sequelize, Sequelize);
+// db.RoomImage = require('../models/roomModel/roomImage')(sequelize, Sequelize);
 
-db.BookingStatus = require('../models/bookingModel/bookingStatus')(sequelize, Sequelize);
-db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
+// db.BookingStatus = require('../models/bookingModel/bookingStatus')(sequelize, Sequelize);
+// db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
 
 db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
 db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
