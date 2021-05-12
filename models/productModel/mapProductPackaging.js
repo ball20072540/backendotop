@@ -26,7 +26,7 @@ module.exports = (sequelize, Sequelize) => {
         packagingPrice: {
             type: Sequelize.DOUBLE,
             allowNull: true
-        },
+        }
       },
       {
         timestamps: false,
