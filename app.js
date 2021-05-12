@@ -10,11 +10,11 @@ var usersRouter = require('./routes/users');
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-const db = require("./config/database");
+// const db = require("./config/database");
 
 var app = express();
 
-db.sequelize.sync();
+// db.sequelize.sync();
 
 //custom setup
 app.use(bodyParser.urlencoded({ extended: true }))
