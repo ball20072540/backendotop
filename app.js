@@ -7,7 +7,19 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const cors = require('cors')
+const bodyParser = require('body-parser')
+
+const db = require("./config/database");
+
 var app = express();
+
+db.sequelize.sync();
+
+//custom setup
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
