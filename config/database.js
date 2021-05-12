@@ -31,20 +31,20 @@ db.AttractionImage = require('../models/attractionModel/attractionImage')(sequel
 
 db.BusinessType = require('../models/businessModel/businessType')(sequelize, Sequelize);
 db.Business = require('../models/businessModel/business')(sequelize, Sequelize);
-db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 db.BusinessLicense = require('../models/businessModel/businessLicense')(sequelize, Sequelize);
 db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
+db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
 
-db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
+// db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
 
-db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
-db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
+// db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
+// db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
-db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
-db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
-db.Product = require('../models/productModel/product')(sequelize, Sequelize);
-db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
-db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
+// db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
+// db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
+// db.Product = require('../models/productModel/product')(sequelize, Sequelize);
+// db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
+// db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
 
 // db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
 // db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
