@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('update version to 100');
 });
 
 // const authenSecret = require("../middleware/authenSecret")
