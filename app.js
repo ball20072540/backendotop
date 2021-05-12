@@ -15,8 +15,6 @@ db.sequelize.sync();
 
 var app = express();
 
-
-
 //custom setup
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
