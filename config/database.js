@@ -1,18 +1,5 @@
 const Sequelize = require('sequelize');
-// const env = require('../env');
-const env = {
-  database: 'heroku_af31d67d16903c4',
-  username: 'bfadb6e62834bc',
-  password: '6a8be4ce',
-  host: 'us-cdbr-east-03.cleardb.com',
-  dialect: 'mysql',
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
-};
+const env = require('../env');
 
 const sequelize = new Sequelize(env.database, env.username, env.password, {
     host: env.host,
@@ -31,47 +18,47 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //---------------------------------- Table ---------------------------------- 
-db.User = require('../models/userModel/user')(sequelize, Sequelize);
-db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
-db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
+// db.User = require('../models/userModel/user')(sequelize, Sequelize);
+// db.UserRole = require('../models/userModel/userRole')(sequelize, Sequelize);
+// db.UserImage = require('../models/userModel/userImage')(sequelize, Sequelize);
 
-db.Event = require('../models/eventsModal/event')(sequelize, Sequelize);
-db.EventImage = require('../models/eventsModal/eventImage')(sequelize, Sequelize);
+// db.Event = require('../models/eventsModal/event')(sequelize, Sequelize);
+// db.EventImage = require('../models/eventsModal/eventImage')(sequelize, Sequelize);
 
-db.Attraction = require('../models/attractionModel/attraction')(sequelize, Sequelize);
-db.AttractionImage = require('../models/attractionModel/attractionImage')(sequelize, Sequelize);
-db.AttractionType = require('../models/attractionModel/attractionType')(sequelize, Sequelize);
+// db.Attraction = require('../models/attractionModel/attraction')(sequelize, Sequelize);
+// db.AttractionImage = require('../models/attractionModel/attractionImage')(sequelize, Sequelize);
+// db.AttractionType = require('../models/attractionModel/attractionType')(sequelize, Sequelize);
 
-db.Business = require('../models/businessModel/business')(sequelize, Sequelize);
-db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
-db.BusinessLicense = require('../models/businessModel/businessLicense')(sequelize, Sequelize);
-db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
-db.BusinessType = require('../models/businessModel/businessType')(sequelize, Sequelize);
+// db.Business = require('../models/businessModel/business')(sequelize, Sequelize);
+// db.BusinessImage = require('../models/businessModel/businessImage')(sequelize, Sequelize);
+// db.BusinessLicense = require('../models/businessModel/businessLicense')(sequelize, Sequelize);
+// db.BusinessLogo = require('../models/businessModel/businessLogo')(sequelize, Sequelize);
+// db.BusinessType = require('../models/businessModel/businessType')(sequelize, Sequelize);
 
-db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
+// db.LogOwnerRegister = require('../models/logModel/logOwnerRegister')(sequelize, Sequelize);
 
-db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
-db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
+// db.DeliveryService = require('../models/deliveryModel/deliveryService')(sequelize, Sequelize);
+// db.Packaging = require('../models/packagingModel/packaging')(sequelize, Sequelize);
 
-db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
-db.Product = require('../models/productModel/product')(sequelize, Sequelize);
-db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
-db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
-db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
+// db.MapProductPackaging = require('../models/productModel/mapProductPackaging')(sequelize, Sequelize);
+// db.Product = require('../models/productModel/product')(sequelize, Sequelize);
+// db.ProductImage = require('../models/productModel/productImage')(sequelize, Sequelize);
+// db.ProductSuffix = require('../models/productModel/productSuffix')(sequelize, Sequelize);
+// db.ProductType = require('../models/productModel/productType')(sequelize, Sequelize);
 
-db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
-db.OrderDetail = require('../models/orderModel/orderDetail')(sequelize, Sequelize);
-db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
+// db.Order = require('../models/orderModel/order')(sequelize, Sequelize);
+// db.OrderDetail = require('../models/orderModel/orderDetail')(sequelize, Sequelize);
+// db.OrderStatus = require('../models/orderModel/orderStatus')(sequelize, Sequelize);
 
-db.Room = require('../models/roomModel/room')(sequelize, Sequelize);
-db.RoomType = require('../models/roomModel/roomType')(sequelize, Sequelize);
-db.RoomStatus = require('../models/roomModel/roomStatus')(sequelize, Sequelize);
-db.RoomImage = require('../models/roomModel/roomImage')(sequelize, Sequelize);
+// db.Room = require('../models/roomModel/room')(sequelize, Sequelize);
+// db.RoomType = require('../models/roomModel/roomType')(sequelize, Sequelize);
+// db.RoomStatus = require('../models/roomModel/roomStatus')(sequelize, Sequelize);
+// db.RoomImage = require('../models/roomModel/roomImage')(sequelize, Sequelize);
 
-db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
-db.BookingStatus = require('../models/bookingModel/bookingStatus')(sequelize, Sequelize);
+// db.Booking = require('../models/bookingModel/booking')(sequelize, Sequelize);
+// db.BookingStatus = require('../models/bookingModel/bookingStatus')(sequelize, Sequelize);
 
-db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
+// db.Banner = require('../models/bannerModel/banner')(sequelize, Sequelize);
 // //---------------------------------- Map Table ----------------------------------
 // db.UserRole.hasMany(db.User, {foreignKey: 'role_id', targetKey: 'id'})
 // db.User.belongsTo(db.UserRole, {foreignKey: 'role_id', targetKey: 'id'})
